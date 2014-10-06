@@ -1,0 +1,36 @@
+<%# coding: UTF-8 -%>
+<div class="container">
+
+    <div id="logo" class="text-center"><a href="/"><img src="<%= escape_html @uri_path %>/themes/<%= @theme %>/logo.png" alt="<%= escape_html @organization %>" /></a></div>
+
+  <% if @message %>
+  <div id="message" class="text-center <%= escape_html @message[:type] %>">
+    <span class="bg-primary"><%= escape_html @message[:message] %></span>
+  </div>
+  <% end %>
+
+
+<form method="post" action="<%= @form_action || "login" %>" id="login-form"
+      onsubmit="submitbutton = document.getElementById('login-submit'); submitbutton.value='<%= t.notice.please_wait %>'; submitbutton.disabled=true; return true;" class="form-signin" role="form">
+
+    <h2 class="form-signin-heading">Please sign in</h2>
+    <input type="text" id="username" name="username" class="form-control" placeholder="Email address" required autofocus>
+    <input type="password" name="password" class="form-control" placeholder="Password" required autocomplete="off">
+    <input type="hidden" id="lt" name="lt" value="<%= escape_html @lt %>" />
+    <input type="hidden" id="service" name="service" value="<%= escape_html @service %>" />
+    <input type="submit" class="btn btn-lg btn-primary btn-block" accesskey="l" value="Sign in with your CCID"
+           tabindex="4" id="login-submit" />
+
+  <% if @message %>
+    <p id="logout"><a class="btn btn-danger btn-block" href="/logout">Log out</a></p>
+  <% end %>
+
+ 
+
+  </form>
+
+
+
+
+
+</div>

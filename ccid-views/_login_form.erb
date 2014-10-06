@@ -1,0 +1,35 @@
+<%# coding: UTF-8 -%>
+<form method="post" action="<%= @form_action || "login" %>" id="login-form"
+      onsubmit="submitbutton = document.getElementById('login-submit'); submitbutton.value='<%= t.notice.please_wait %>'; submitbutton.disabled=true; return true;">
+  <table id="form-layout">
+    <tr>
+      <td id="username-label-container">
+      </td>
+      <td id="username-container">
+        <input type="text" id="username" name="username"
+               size="32" tabindex="1" accesskey="u" />
+      </td>
+    </tr>
+    <tr>
+      <td id="password-label-container">
+        <label id="password-label" for="password">
+          <%= t.label.password %>
+        </label>
+      </td>
+      <td id="password-container">
+        <input type="password" id="password" name="password"
+               size="32" tabindex="2" accesskey="p" autocomplete="off" />
+      </td>
+    </tr>
+    <tr>
+      <td />
+      <td id="submit-container">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" id="infoline">
+        <%= @infoline %>
+      </td>
+    </tr>
+  </table>
+</form>
