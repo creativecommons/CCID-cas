@@ -21,3 +21,4 @@ tramp
 *.rel
 # AUCTeX auto folder
 /auto/
+db.php
