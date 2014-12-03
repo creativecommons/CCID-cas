@@ -3,6 +3,8 @@
 Copyright 2011-2014 Twitter, Inc.
 
  * Licensed under MIT <https://github.com/twbs/bootstrap/blob/master/LICENSE>
+ 
+## CC modifications
 
 CC modified HTML contributions (layout.rb) can be used under the terms of CC0.
 
@@ -10,6 +12,8 @@ CC modified HTML contributions (layout.rb) can be used under the terms of CC0.
 
 See <http://creativecommons.org/policies> for details on how the CC logo
 can be used.
+
+## PHP files
 
 License for all included PHP files as follows.
 
