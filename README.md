@@ -35,9 +35,10 @@ information website refers to Jasig, but it has not existed since it merged
 with the Sakai foundation in 2012 December to form the Apereo Foundation. The
 IRC channel is empty.
 
-[rbCAS/CASinoApp][casinoapp] was evaluated in early 2017, but found to be more
-trouble than it was worth. Also, as of 2019 April, the project appears to be
-abandoned. There has not been a commit since 2016-05-08.
+[rbCAS/CASinoApp][casinoapp] was evaluated as a potential replacement in early
+2017, but found to be more trouble than it was worth. Also, as of 2019 April,
+the project appears to be abandoned. There has not been a commit since
+2016-05-08.
 
 [casinoapp]: https://github.com/rbCAS/CASinoApp
 
