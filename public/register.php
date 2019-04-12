@@ -14,50 +14,50 @@
   <style type="text/css">
 
     body {
-	padding-top: 40px;
-	padding-bottom: 40px;
-	background-color: #eee;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #eee;
     }
 
     .form-signin {
-	max-width: 330px;
-	padding: 15px;
-	margin: 0 auto;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
     }
 
     .form-signin .form-signin-heading,
     .form-signin .checkbox {
-	margin-bottom: 10px;
+    margin-bottom: 10px;
     }
 
     .form-signin .checkbox {
-	font-weight: normal;
+    font-weight: normal;
     }
 
     .form-signin .form-control {
-	position: relative;
-	height: auto;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 10px;
-	font-size: 16px;
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
     }
 
     .form-signin .form-control:focus {
-	z-index: 2;
+    z-index: 2;
     }
 
     .form-signin input[type="email"] {
-	margin-bottom: -1px;
-	border-bottom-right-radius: 0;
-	border-bottom-left-radius: 0;
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
     }
 
     .form-signin input[type="password"] {
-	margin-bottom: 10px;
-	border-top-left-radius: 0;
-	border-top-right-radius: 0;
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     }
 
     #logo {margin-bottom: 3em;}
@@ -75,14 +75,11 @@
 
   <title>Creative Commons</title>
   </head>
-  
+
   <body onload="if (document.getElementById('username')) document.getElementById('username').focus()">
     <div class="container">
 
     <div id="logo" class="text-center"><a href="/"><img src="/themes/ccid/logo.png" alt="Creative Commons" /></a></div>
-
-  
-
 
 <form method="post" action="save.php" id="login-form" class="form-signin" role="form">
 
@@ -109,25 +106,9 @@
     <input type="submit" class="btn btn-lg btn-success btn-block" accesskey="l" value="Register"
            tabindex="4" id="login-submit" />
 
-  
-    <div style="padding: 14px; background: white; margin-top: 14px;">
-
-    <p><b>Coming soon:</b> support for Google, Facebook, Mozilla Persona, GitHub and Twitter logins!</p>
-
-    </div>
- 
-
- 
-
   </form>
 
-
-
-
-
 </div>
-
-
 
   </body>
 </html>
