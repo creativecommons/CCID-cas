@@ -1,0 +1,4 @@
+#!/bin/sh
+# Quick wrapper to save some typing
+sudo mysql --defaults-file='/root/.my.cnf' --database='ccid' \
+    --execute="${1}"
