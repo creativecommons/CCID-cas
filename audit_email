@@ -1,0 +1,46 @@
+#!/bin/sh
+email=${1}
+query_ccid "SELECT 'cas' AS 'TABLE', email, nickname, global, verified, ccid
+            FROM cas
+            WHERE email = '${email}' \G" \
+    | tail -n+2
+echo
+echo
+
+
+echo    '   TABLE: casserver_st'
+echo -n '    Rows: '
+query_ccid "SELECT COUNT(*)
+            FROM casserver_st
+            WHERE username = '${email}'" | tail -n+2
+echo -n '  Oldest: '
+query_ccid "SELECT created_on
+            FROM casserver_st
+            WHERE username = '${email}'
+            ORDER BY created_on ASC
+            LIMIT 1" | tail -n+2
+echo 'Distinct services/client_hostnames:'
+query_ccid "SELECT DISTINCT service, client_hostname
+            FROM casserver_st
+            WHERE username = '${email}' \G"
+echo
+echo
+
+
+echo    '   TABLE: casserver_tgt'
+echo -n '    Rows: '
+query_ccid "SELECT COUNT(*)
+            FROM casserver_tgt
+            WHERE username = '${email}'" | tail -n+2
+echo -n '  Oldest: '
+query_ccid "SELECT created_on
+            FROM casserver_tgt
+            WHERE username = '${email}'
+            ORDER BY created_on ASC
+            LIMIT 1" | tail -n+2
+echo 'Distinct client_hostnames/extra_attributes:'
+query_ccid "SELECT DISTINCT client_hostname, extra_attributes
+            FROM casserver_tgt
+            WHERE username = '${email}' \G"
+echo
+echo
