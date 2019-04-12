@@ -71,28 +71,41 @@
     #logout {margin-top: 1em;}
 
   </style>
+
+
   <title>Creative Commons</title>
   </head>
-  <body onload="if (document.getElementById('username')) { document.getElementById('username').focus() }">
+  
+  <body onload="if (document.getElementById('username')) document.getElementById('username').focus()">
     <div class="container">
-      <div id="logo" class="text-center"><a href="/"><img
-                 src="/themes/ccid/logo.png"
-                 alt="Creative Commons" /></a></div>
 
-<?php if ($_GET['e']) { ?>
-      <p class="bg-danger text-center">Please choose another username.
-        If you continue to have problems, please email <a
-        href="mailto:info@creativecommons.org">info@creativecommons.org</a>.</p>
-<?php } ?>
+    <div id="logo" class="text-center"><a href="/"><img src="/themes/ccid/logo.png" alt="Creative Commons" /></a></div>
 
-      <form method="post" action="save-global.php" id="login-form"
-        class="form-signin" role="form">
+  
 
-        <h2 class="form-signin-heading">Register for a CCID</h2>
+  <?php
 
-        <p>Thanks for verifying your account.</p>
+     if ($_GET['e']) { ?>
 
-        <p>Please enter an unique username for use with your acccount.</p>
+     <p class="bg-danger text-center">Please choose another username. If you continue to have problems, please email <a href="mailto:info@creativecommons.org">info@creativecommons.org</a>.</p>
+
+       <?php
+	  
+	  }
+
+
+     ?>
+
+
+<form method="post" action="save-global.php" id="login-form" class="form-signin" role="form">
+
+
+    <h2 class="form-signin-heading">Register for a CCID</h2>
+
+    <p>Thanks for verifying your account.</p>
+
+    <p>Please enter an unique username for use with your acccount.</p>
+
 <?php
 
 $hash = $_GET['x'];
@@ -104,6 +117,7 @@ if (mysqli_connect_errno()) {
     printf("Connection failed");
     exit();
 }
+
 
 $sql = "SELECT nickname, ccid FROM cas WHERE encryption_salt=?";
 
@@ -117,13 +131,27 @@ $nickname = strtolower($nickname);
 $nickname = str_replace(" ", "", $nickname);
 
 ?>
-        <input type="text" id="global" name="global" class="form-control"
-          value="<?php echo $nickname; ?>" required>
-        <input type="hidden" name="x" value="<?php echo $hash; ?>" />
-        <input type="submit" class="btn btn-lg btn-success btn-block"
-          accesskey="l" value="Verify my account"
-          tabindex="4" id="login-submit" />
-      </form>
-    </div>
+
+
+
+    <input type="text" id="global" name="global" class="form-control" value="<?php echo $nickname; ?>" required>
+    <input type="hidden" name="x" value="<?php echo $hash; ?>" />
+    <input type="submit" class="btn btn-lg btn-success btn-block" accesskey="l" value="Verify my account"
+           tabindex="4" id="login-submit" />
+
+  
+
+ 
+
+  </form>
+
+
+
+
+
+</div>
+
+
+
   </body>
 </html>
