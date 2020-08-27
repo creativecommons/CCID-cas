@@ -14,13 +14,6 @@
 
     <h2 class="form-signin-heading">Please sign in</h2>
 
-  <% if not @authenticated %>
-  <div class="alert alert-info">
-  <strong>2018-05-25: We have updated our <a href="https://creativecommons.org/terms/">Terms of Service</a> and <a href="https://creativecommons.org/privacy/">Privacy Policy</a>.</strong><br />
-  Before continuing on our websites or using our services, please review.
-  </div>
-  <% end %>
-
     <input type="email" id="username" name="username" class="form-control" placeholder="Email address" required autofocus>
     <input type="password" name="password" class="form-control" placeholder="Password" required autocomplete="off">
     <input type="hidden" id="lt" name="lt" value="<%= escape_html @lt %>" />
